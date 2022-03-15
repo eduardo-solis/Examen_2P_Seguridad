@@ -1,0 +1,29 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+{% from '_macros.html' import render_field %}
+
+<div class="container mt-4">
+    <div class="row ">
+        <div class="col"></div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registro</h5>
+                    <form name="register" action="/auth/register" method="POST">
+                        {{render_field(form.user, class='form-control')}}
+                        <br>
+                        {{render_field(form.mail, class='form-control')}}
+                        <br>
+                        {{render_field(form.password, class='form-control')}}
+                        <br>
+                        {{form.submit(class='btn btn-primary form-control')}}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}

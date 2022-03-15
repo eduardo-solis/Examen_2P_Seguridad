@@ -1,0 +1,35 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+{% from '_macros.html' import render_field %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+
+            <form action="/products/admin/update/{{p.id}}" method="POST">
+
+                <label for="nombre">Nombre</label>
+                <input class="form-control" type="text" name="nombre" value="{{p.nombre}}">
+                <br>
+                <label for="cantidad">Cantidad</label>
+                <input class="form-control" type="number" name="cantidad" value="{{p.cantidad}}">
+                <br>
+                <label for="precio">Precio</label>
+                <input class="form-control" type="number" name="precio" step="0.1" value="{{p.precio}}">
+                <br>
+                <label for="imagen">Imagen</label>
+                <input type="file" class="form-control" name="imagen" value="{{p.imagen}}">
+                <br>
+                <button class="btn btn-primary" type="submit">Actualizar</button>
+
+            </form>
+
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+{% endblock %}

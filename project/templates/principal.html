@@ -1,0 +1,118 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <img src="../static/img/imagenPromocional.png" width="900px" class="img-fluid mx-auto d-block" alt="Imagen Promocional">
+
+    <div>
+        <h1 class="display-5 mt-5">¡En BBTesta encuentras todas las bebidas que buscas!</h1>
+
+        <p class="mt-3 text-center">Somos una empresa de menudeo y mayoreo que se centra en la venta de bebidas como vino, refresco, agua, jugos etc.</p>
+
+        <img src="../static/img/logo.png" class="img-fluid mx-auto d-block mt-5" width="600px" alt="Logo">
+
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center text-danger">$ 250.00 MX</h2>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Licores</h5>
+                        <p class="card-text">
+                            Contamos con diferentes tipos de licores, para que tus reuniones tengan un excelente ambiente
+                            te sentiras el rey de la pachanga con nuestros licores desde $250.00 MX.
+                        </p>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Vodka</li>
+                            <li class="list-group-item">Vino</li>
+                            <li class="list-group-item">Cerveza</li>
+                            <li class="list-group-item">Ron</li>
+                            <li class="list-group-item">Tequila</li>
+                            <li class="list-group-item">Whisky</li>
+                            <li class="list-group-item">Mezcal</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center text-danger">$ 150.00 MX</h2>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Refrescos</h5>
+                        <p class="card-text">
+                            Contamos con diferentes tipos de refrescos, para que tus reuniones tengan un excelente ambiente
+                            te sentiras el rey de la pachanga con nuestros refrescos desde $150.00 MX. 
+                        </p>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Coca</li>
+                            <li class="list-group-item">Naranja</li>
+                            <li class="list-group-item">Toranja</li>
+                            <li class="list-group-item">Piña</li>
+                            <li class="list-group-item">Light</li>
+                            <li class="list-group-item">Manzana</li>
+                            <li class="list-group-item">Sangria</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center text-danger">$ 100.00 MX</h2>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Aguas</h5>
+                        <p class="card-text">
+                            Contamos con diferentes tipos de aguas, para que tus reuniones tengan un excelente ambiente
+                            te sentiras el rey de la pachanga con nuestros aguas desde $100.00 MX.
+                        </p>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Agua</li>
+                            <li class="list-group-item">Agua Mineral</li>
+                            <li class="list-group-item">Agua de naranja</li>
+                            <li class="list-group-item">Agua de piña</li>
+                            <li class="list-group-item">Agua de fresa</li>
+                            <li class="list-group-item">Agua de uva</li>
+                            <li class="list-group-item">Agua de limón</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col">
+                <h5>Puedes contactarte con nosotros para realizar pedidos o compras desde cualquier parte de México.</h5>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary form-control" href="{{ url_for('main.contacto') }}">Contactanos!</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

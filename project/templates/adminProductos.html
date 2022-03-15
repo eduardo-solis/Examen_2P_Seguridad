@@ -1,0 +1,65 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+{% from '_macros.html' import render_field %}
+
+<h1>Admin Productos</h1>
+<h1>{{name}}</h1>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+
+            <form action="/products/admin/new" method="POST">
+                {{render_field(form.nombre, class='form-control')}}
+                <br>
+                {{render_field(form.cantidad, class='form-control')}}
+                <br>
+                {{render_field(form.precio, class='form-control')}}
+                <br>
+                {{render_field(form.imagen, class='form-control')}}
+                <br>
+                {{form.enviar(class='btn btn-primary form-control')}}
+
+            </form>
+
+        </div>
+        <div class="col-md-7">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in productos %}
+                    <tr>
+                        <td>{{item.id}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.cantidad}}</td>
+                        <td>{{item.precio}}</td>
+                        <td>
+                            <img src="../static/img_productos/{{item.imagen}}" width="100px" height="100px" alt="imagen">
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="{{url_for('products.update', id = item.id)}}">Actualizar</a>
+                            <a class="btn btn-danger" href="{{url_for('products.delete', id = item.id)}}">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
